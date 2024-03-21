@@ -24,7 +24,7 @@ A chatbot for our culinary needs.
 
 ## Observations
 
-- Whenever a valid recipe is inputted, the chatbot finds a way to make some improvement to it.
+- Whenever a valid recipe is inputted, the chatbot finds a way to make some improvements to it.
 - The chatbot can identify irrelevant messages and decline to respond to them.
 
 ## Running the Code

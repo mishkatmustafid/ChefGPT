@@ -4,17 +4,19 @@ A chatbot for our culinary needs.
 
 ## Features
 
-1. Ingredients to Dish
+1. Finds a dish that you can make using some given ingredients.
+
    Exception Handling: If no dish is possible with the given combination of ingredients, it'll be pointed out.
 
     ![image](assets/ingredients-to-dish.png)
 
-2. Dish to recipe
+2. Generates a recipe for a dish.
+
    Exception Handling: If the input is not a dish, it'll be pointed out.
 
     ![image](assets/dish-to-recipe.png)
 
-3. Recipe feedback
+3. Gives feedback on the user's recipe.
 
    Exception Handling: If the input is not a recipe, it'll be pointed out.
 

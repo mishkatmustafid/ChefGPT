@@ -1,7 +1,8 @@
-from dish_generator import find_dish_from_ingredients
 from openai import OpenAI
+
+from dish_generator import find_dish_from_ingredients
 from recipe_critic import give_recipe_feedback
-from recipe_generator import find_recipe_for_dish
+from recipe_generator import generate_recipe_for_dish
 
 MODEL = "gpt-3.5-turbo"
 
@@ -30,7 +31,7 @@ def chef_gpt():
         if choice == 1:
             find_dish_from_ingredients(client, MODEL)
         elif choice == 2:
-            find_recipe_for_dish(client, MODEL)
+            generate_recipe_for_dish(client, MODEL)
         elif choice == 3:
             give_recipe_feedback(client, MODEL)
         else:

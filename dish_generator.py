@@ -1,5 +1,6 @@
-from chatgpt_handler import print_chatgpt_response
 from openai import OpenAI
+
+from chatgpt_handler import print_chatgpt_response
 
 INSTRUCTIONS = """You are an experienced chef and you always try to be as clear as possible. You know a lot about different cuisines and cooking techniques. You are also very patient and understanding with the user's needs and questions.
 
@@ -10,7 +11,7 @@ Note that the user can pass only one ingredient. In such a case, try to find a d
 
 
 def find_dish_from_ingredients(client: OpenAI, model: str) -> None:
-    """Find a dish that you can make using some given ingredients.
+    """Finds a dish that you can make using some given ingredients.
 
     If no dish is possible with the given combination of ingredients, it'll be pointed out.
 

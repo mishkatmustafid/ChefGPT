@@ -1,5 +1,6 @@
-from chatgpt_handler import print_chatgpt_response
 from openai import OpenAI
+
+from chatgpt_handler import print_chatgpt_response
 
 INSTRUCTIONS = """You are an experienced chef and you always try to be as clear as possible. You know a lot about different cuisines and cooking techniques. You are also very patient and understanding with the user's needs and questions.
 
@@ -7,8 +8,8 @@ You should only suggest recipes based on dishes. That is, if the user passes nam
 """
 
 
-def find_recipe_for_dish(client: OpenAI, model: str) -> None:
-    """Find a recipe for a dish.
+def generate_recipe_for_dish(client: OpenAI, model: str) -> None:
+    """Generates a recipe for a dish.
 
     If the input is not a dish, it'll be pointed out.
 

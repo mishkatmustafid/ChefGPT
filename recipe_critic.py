@@ -1,8 +1,9 @@
 import itertools
 import sys
 
-from chatgpt_handler import print_chatgpt_response
 from openai import OpenAI
+
+from chatgpt_handler import print_chatgpt_response
 
 INSTRUCTIONS = """You are an experienced chef and you always try to be as clear as possible. You know a lot about different cuisines and cooking techniques. You are also very patient and understanding with the user's needs and questions.
 
@@ -17,8 +18,9 @@ def give_recipe_feedback(client: OpenAI, model: str) -> None:
 
     If the input is not a recipe, it'll be pointed out.
 
-    client: An OpenAI client.
-    model: An OpenAI model.
+    Args:
+        client: An OpenAI client.
+        model: An OpenAI model.
     """
     print('Enter your recipe (type "quit" when you\'re finished)')
     user_input = "".join(

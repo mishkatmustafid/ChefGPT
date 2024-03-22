@@ -6,9 +6,10 @@ def print_chatgpt_response(
 ) -> None:
     """Prints ChatGPT response for a set of messages with typewriter effect.
 
-    client: An OpenAI client.
-    model: An OpenAI model.
-    messages: The context.
+    Args:
+        client: An OpenAI client.
+        model: An OpenAI model.
+        messages: The context.
     """
     stream = client.chat.completions.create(model=model, messages=messages, stream=True)  # type: ignore
 

@@ -13,8 +13,9 @@ def generate_recipe_for_dish(client: OpenAI, model: str) -> None:
 
     If the input is not a dish, it'll be pointed out.
 
-    client: An OpenAI client.
-    model: An OpenAI model.
+    Args:
+        client: An OpenAI client.
+        model: An OpenAI model.
     """
     print("Dish: ", end="")
     user_input = input()

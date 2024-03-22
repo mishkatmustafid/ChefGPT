@@ -15,8 +15,9 @@ def find_dish_from_ingredients(client: OpenAI, model: str) -> None:
 
     If no dish is possible with the given combination of ingredients, it'll be pointed out.
 
-    client: An OpenAI client.
-    model: An OpenAI model.
+    Args:
+        client: An OpenAI client.
+        model: An OpenAI model.
     """
     print("Ingredient list (comma-separated): ", end="")
     user_input = input()

@@ -1,4 +1,5 @@
 chefgpt
+
 .venv
 __pycache__
 .env

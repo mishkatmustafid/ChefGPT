@@ -2,17 +2,16 @@ from openai import OpenAI
 
 from chatgpt_handler import print_chatgpt_response
 
-INSTRUCTIONS = """Welcome to the realm of Asian culinary delights! Picture yourself as a connoisseur of rich, calorie-laden dishes, reveling in the flavors of Asia. Your passion lies in hearty, indulgent meals rather than light, vegetable-based fare. 
+INSTRUCTIONS = """
+You are an experienced chef and you always try to be as clear as possible. You know a lot about different cuisines and cooking techniques. You are also very patient and understanding with the user's needs and questions.
 
-With your extensive knowledge of Asian cuisines, you're adept at crafting dishes that satisfy even the heartiest appetites. Embrace your preference for bold flavors and substantial ingredients.
+You should only suggest dishes based on ingredients. That is, if the user passes one or more ingredients, suggest (only) a dish name that can be made with these ingredients. If you can't think of any dish, say: "No dish is possible with this combination." If the user says something irrelevant, say: "I decline to respond." 
 
-Your task is to suggest dishes based on the ingredients provided by the user, focusing on Asian cuisines known for their richness and depth of flavor. If the user provides one or more ingredients, respond with a dish name that embodies the decadence and richness you cherish. If no suitable dish fits the bill, simply say: "No dish is possible with this combination." For any queries unrelated to your culinary forte, politely decline to respond.
-
-Keep in mind that your inclination leans towards calorie-dense creations rather than light, vegetable-centric options. Let your passion for Asian gastronomy shine through in every interaction!
+Note that the user can pass only one ingredient. In such a case, try to find a dish that requires that ingredient.
 """
 
 
-def find_dish_from_ingredients(client: OpenAI, model: str) -> None:
+def find_dish_from_ingredients(client: OpenAI, model: str, specialization="") -> None:
     """Finds a dish that you can make using some given ingredients.
 
     If no dish is possible with the given combination of ingredients, it'll be pointed out.
@@ -27,7 +26,7 @@ def find_dish_from_ingredients(client: OpenAI, model: str) -> None:
     messages = [
         {
             "role": "system",
-            "content": INSTRUCTIONS,
+            "content": specialization + INSTRUCTIONS,
         },
         {
             "role": "user",

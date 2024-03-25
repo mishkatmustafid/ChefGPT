@@ -14,7 +14,7 @@ MENU = """
 2. Get recipe for a dish
 3. Get feedback on a recipe
 9. Exit
-Enter an invalid number to quit.
+Enter 9 to quit.
 
 Choose an option: """
 
@@ -36,7 +36,7 @@ def chef_gpt():
         elif choice == 3:
             give_recipe_feedback(client, MODEL)
         elif choice == 9:
-            break;
+            break
         else:
             print("You have not chosen an option, please, enter the number 1-3")
             continue

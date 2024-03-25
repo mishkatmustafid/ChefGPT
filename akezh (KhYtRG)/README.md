@@ -1,6 +1,6 @@
 # ChefGPT
 
-A chatbot for our culinary needs. Chinese version
+Chinese version
 
 ## Features
 
@@ -21,42 +21,3 @@ A chatbot for our culinary needs. Chinese version
 3. Gives feedback on the user's recipe.
 
    Exception Handling: If the input is not a recipe, it'll be pointed out.
-
-## Observations
-
-- Whenever a valid recipe is inputted, the chatbot finds a way to make some improvements to it.
-- The chatbot can identify irrelevant messages and decline to respond to them.
-
-## Running the Code
-
-1. Create a virtual environment.
-
-   ```sh
-   python -m venv chefgpt
-   ```
-
-2. Activate it.
-
-   - Windows
-
-     ```ps
-       .\chefgpt\Scripts\Activate.ps1
-     ```
-
-   - Linux
-
-     ```sh
-     source chefgpt/Scripts/activate
-     ```
-
-3. Install dependencies.
-
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-4. Run the program.
-
-   ```sh
-   python main.py
-   ```

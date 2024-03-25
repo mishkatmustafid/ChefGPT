@@ -1,6 +1,4 @@
 from openai import OpenAI
-from dotenv import load_dotenv
-import os
 
 from dish_generator import find_dish_from_ingredients
 from recipe_critic import give_recipe_feedback
@@ -23,9 +21,7 @@ Choose an option: """
 def chef_gpt():
     """A chatbot for our culinary needs."""
 
-    load_dotenv()
-
-    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+    client = OpenAI()
 
     while True:
         print(MENU, end="")

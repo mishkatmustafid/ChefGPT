@@ -6,9 +6,9 @@ A chatbot for our culinary needs.
 
 1. Create a virtual environment.
 
-   ```sh
-   python -m venv chefgpt
-   ```
+    ```sh
+    python -m venv chefgpt
+    ```
 
 2. Activate it.
 
@@ -32,25 +32,25 @@ A chatbot for our culinary needs.
 
 4. Run the program.
 
-   - Without specialization:
+    - Without specialization:
 
-     ```sh
-     python main.py
-     ```
+      ```sh
+      python main.py
+      ```
 
-   - With specialization:
+    - With specialization:
 
-     ```sh
-     python main.py "<Specialization>"
-     ```
+      ```sh
+      python main.py "<Specialization>"
+      ```
 
-     Basically, by passing a command line argument to the script, you can customize the chef. Here are some examples:
+      Basically, by passing a command line argument to the script, you can customize the chef. Here are some examples:
 
-     ```sh
-     python main.py "You are a Chinese chef and you specialize in the Chinese cuisine."
-     python main.py "You are a Russian chef and you specialize in the Russian cuisine."
-     python main.py "You are a vegan chef and you specialize in cooking vegan dishes."
-     ```
+      ```sh
+      python main.py "You are a Chinese chef and you specialize in the Chinese cuisine."
+      python main.py "You are a Russian chef and you specialize in the Russian cuisine."
+      python main.py "You are a vegan chef and you specialize in cooking vegan dishes."
+      ```
 
 ## Features
 

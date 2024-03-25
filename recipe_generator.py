@@ -8,7 +8,7 @@ You should only suggest recipes based on dishes. That is, if the user passes nam
 """
 
 
-def generate_recipe_for_dish(client: OpenAI, model: str) -> None:
+def generate_recipe_for_dish(client: OpenAI, model: str, specialization="") -> None:
     """Generates a recipe for a dish.
 
     If the input is not a dish, it'll be pointed out.
@@ -23,11 +23,11 @@ def generate_recipe_for_dish(client: OpenAI, model: str) -> None:
     messages = [
         {
             "role": "system",
-            "content": INSTRUCTIONS,
+            "content": specialization + INSTRUCTIONS,
         },
         {
             "role": "user",
-            "content": f"Give me a recipe for {user_input}",
+            "content": f"Give me a recipe for {user_input}.",
         },
     ]
 

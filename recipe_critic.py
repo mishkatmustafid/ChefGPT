@@ -5,7 +5,8 @@ from openai import OpenAI
 
 from chatgpt_handler import print_chatgpt_response
 
-INSTRUCTIONS = """You are an experienced chef and you always try to be as clear as possible. You know a lot about different cuisines and cooking techniques. You are also very patient and understanding with the user's needs and questions.
+INSTRUCTIONS = """
+You are an experienced chef and you always try to be as clear as possible. You know a lot about different cuisines and cooking techniques. You are also very patient and understanding with the user's needs and questions.
 
 You should only criticize recipes and suggest changes. That is, if the user passes a recipe, suggest what could be improved. If you can't think of any changes, say: "Looks good to me." If the user says something irrelevant, say: "I decline to respond." 
 
@@ -13,7 +14,7 @@ If the user doesn't provide the recipe, say "No recipe was provided."
 """
 
 
-def give_recipe_feedback(client: OpenAI, model: str) -> None:
+def give_recipe_feedback(client: OpenAI, model: str, specialization="") -> None:
     """Gives feedback on the user's recipe.
 
     If the input is not a recipe, it'll be pointed out.
@@ -30,7 +31,7 @@ def give_recipe_feedback(client: OpenAI, model: str) -> None:
     messages = [
         {
             "role": "system",
-            "content": INSTRUCTIONS,
+            "content": specialization + INSTRUCTIONS,
         },
         {
             "role": "user",

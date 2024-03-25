@@ -21,7 +21,7 @@ A chatbot for our culinary needs.
    - Linux
 
      ```sh
-     source chefgpt/Scripts/activate
+     source chefgpt/bin/activate
      ```
 
 3. Install dependencies.

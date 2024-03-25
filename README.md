@@ -58,19 +58,19 @@ A chatbot for our culinary needs.
 
    Exception Handling: If no dish is possible with the given combination of ingredients, it'll be pointed out.
 
-    ![image](assets/ingredients-to-dish.png)
+   ![image](assets/ingredients-to-dish.png)
 
 2. Generates a recipe for a dish.
 
    Exception Handling: If the input is not a dish, it'll be pointed out.
 
-    ![image](assets/dish-to-recipe.png)
+   ![image](assets/dish-to-recipe.png)
 
 3. Gives feedback on the user's recipe.
 
    Exception Handling: If the input is not a recipe, it'll be pointed out.
 
-    ![image](assets/recipe-feedback.png)
+   ![image](assets/recipe-feedback.png)
 
 ## Specialization
 

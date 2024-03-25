@@ -1,6 +1,6 @@
-import sys
-
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
 from dish_generator import find_dish_from_ingredients
 from recipe_critic import give_recipe_feedback
@@ -22,8 +22,10 @@ Choose an option: """
 
 def chef_gpt():
     """A chatbot for our culinary needs."""
-    client = OpenAI()
-    specialization = sys.argv[1] if len(sys.argv) > 1 else ""
+
+    load_dotenv()
+
+    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
     while True:
         print(MENU, end="")
@@ -32,11 +34,11 @@ def chef_gpt():
         print()
 
         if choice == 1:
-            find_dish_from_ingredients(client, MODEL, specialization)
+            find_dish_from_ingredients(client, MODEL)
         elif choice == 2:
-            generate_recipe_for_dish(client, MODEL, specialization)
+            generate_recipe_for_dish(client, MODEL)
         elif choice == 3:
-            give_recipe_feedback(client, MODEL, specialization)
+            give_recipe_feedback(client, MODEL)
         else:
             break
 

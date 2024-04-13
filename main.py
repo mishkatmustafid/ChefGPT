@@ -6,8 +6,6 @@ from dish_generator import find_dish_from_ingredients
 from recipe_critic import give_recipe_feedback
 from recipe_generator import generate_recipe_for_dish
 
-MODEL = "gpt-3.5-turbo"
-
 MENU = """
 ┏┓┓   ┏┏┓┏┓┏┳┓
 ┃ ┣┓┏┓╋┃┓┃┃ ┃ 
@@ -32,11 +30,11 @@ def chef_gpt():
         print()
 
         if choice == 1:
-            find_dish_from_ingredients(client, MODEL, specialization)
+            find_dish_from_ingredients(client, specialization)
         elif choice == 2:
-            generate_recipe_for_dish(client, MODEL, specialization)
+            generate_recipe_for_dish(client, specialization)
         elif choice == 3:
-            give_recipe_feedback(client, MODEL, specialization)
+            give_recipe_feedback(client, specialization)
         else:
             break
 
